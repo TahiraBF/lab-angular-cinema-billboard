@@ -1,0 +1,24 @@
+<p>
+  show-movies works!
+</p>
+
+
+  <div *ngFor="let movie of movieEntry">
+    <li>{{movie.id}}</li>
+    <li>Title: {{movie.title}}</li>
+    <li>Synopsis: {{movie.synopsis}}</li>
+    <li> Genre:
+    <span *ngFor="let genre of movie.genres"> {{genre}}, </span></li>
+    <li>Release date: {{movie.year}}</li>
+    <li>Director: {{movie.director}}</li>
+    <li> Starring:
+    <span *ngFor="let actor of movie.actors"> {{actor}}</span></li>
+    <li> Showing at:
+    <span *ngFor="let time of movie.hours"> {{time}} |</span> </li>
+    <li>Sala: {{movie.room}}</li>
+
+    <div class="poster">
+      <img src="{{movie.poster}}" alt="">
+    </div>
+
+  </div>
